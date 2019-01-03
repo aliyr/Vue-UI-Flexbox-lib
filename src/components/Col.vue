@@ -9,11 +9,11 @@ export default {
   name: 'Col',
   props: {
     size: {
-      default: 1,
+      default: null,
       type: Number
     },
     minSize: {
-      default: 0,
+      default: null,
       type: Number
     }
   },
@@ -28,5 +28,6 @@ export default {
   .col{
     padding: 0 15px;
     border: 1px solid red;
+    box-sizing: border-box;
   }
 </style>

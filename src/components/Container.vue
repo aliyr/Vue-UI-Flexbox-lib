@@ -26,8 +26,9 @@ export default {
 
 <style scoped>
   .container{
-    width: 200px;
+    width: auto;
     height: auto;
     display: flex;
+    box-sizing: border-box;
   }
 </style>

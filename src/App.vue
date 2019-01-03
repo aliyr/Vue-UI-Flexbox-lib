@@ -2,8 +2,8 @@
   <div id="app">
     <Container>
       <Col :minSize="200">aaa </Col>
-      <Col >aaa </Col>
-      <Col >aaa </Col>
+      <Col :>aaa </Col>
+      <Col :minSize="300">aaa </Col>
     </Container>
   </div>
 </template>
