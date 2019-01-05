@@ -1,7 +1,7 @@
 <template>
     <div
       class="col"
-      v-bind:style="{ flexGrow: size, flexBasis: minSize + 'px'}">
+      v-bind:style="{ flexGrow: size, flexBasis: minSize}">
       <slot></slot>
     </div>
 </template>

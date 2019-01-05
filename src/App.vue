@@ -1,9 +1,19 @@
 <template>
   <div id="app">
-    <Container direction="top">
-      <Column minSize="100">aaa </Column>
-      <Column >aaa </Column>
-      <Column minSize="300">aaa </Column>
+    <Container
+      width="100%"
+      isFlexible="false"
+      style="border: 1px solid indianred"
+    >
+      <Column minSize="25%">aaa </Column>
+      <Column minSize="25%" >aaa </Column>
+      <Container
+        width="50%"
+        style="border: 1px solid indianred"
+      >
+        <Column minSize="25%">aaa </Column>
+        <Column minSize="75%" >aaa </Column>
+      </Container>
     </Container>
   </div>
 </template>
