@@ -1,22 +1,22 @@
 <template>
   <div id="app">
-    <Container>
-      <Col :minSize="200">aaa </Col>
-      <Col :>aaa </Col>
-      <Col :minSize="300">aaa </Col>
+    <Container direction="top">
+      <Column minSize="100">aaa </Column>
+      <Column >aaa </Column>
+      <Column minSize="300">aaa </Column>
     </Container>
   </div>
 </template>
 
 <script>
 import Container from './components/Container'
-import Col from './components/Col'
+import Column from './components/Col'
 
 export default {
   name: 'app',
   components: {
     Container,
-    Col
+    Column
   }
 }
 </script>

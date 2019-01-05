@@ -1,5 +1,7 @@
 <template>
-    <div class="col" v-bind:style="{ flexGrow: size, flexBasis: minSize + 'px'}" @click="alertMe">
+    <div
+      class="col"
+      v-bind:style="{ flexGrow: size, flexBasis: minSize + 'px'}">
       <slot></slot>
     </div>
 </template>
@@ -10,16 +12,12 @@ export default {
   props: {
     size: {
       default: null,
-      type: Number
+      type: String
     },
     minSize: {
       default: null,
-      type: Number
+      type: String
     }
-  },
-  inject: ['alertMe'],
-  methods: {
-
   }
 }
 </script>

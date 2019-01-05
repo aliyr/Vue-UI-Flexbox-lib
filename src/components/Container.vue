@@ -1,7 +1,7 @@
 <template>
     <div
       class="container"
-      v-bind="$attrs"
+      :style="{flexDirection: fDirection}"
     >
       <slot></slot>
     </div>
@@ -10,15 +10,28 @@
 <script>
 export default {
   name: 'Container',
-  inheritAttrs: false,
-  methods: {
-    alertMe () {
-      return { name: 'gholi' }
+  props: {
+    direction: {
+      default: 'row',
+      type: String
     }
   },
-  provide: function () {
-    return {
-      alertMe: this.alertMe
+  computed: {
+    fDirection () {
+      switch (this.direction) {
+        case 'left': {
+          return 'row'
+        }
+        case 'right': {
+          return 'row-reverse'
+        }
+        case 'top': {
+          return 'column'
+        }
+        case 'bottom': {
+          return 'column-reverse'
+        }
+      }
     }
   }
 }
@@ -26,7 +39,7 @@ export default {
 
 <style scoped>
   .container{
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     box-sizing: border-box;
